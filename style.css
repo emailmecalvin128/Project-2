@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+    background: #222;
+    font-family: 'work sans', sans-serif; 
+    font-weight: 300; 
+}
+
+.container {
+    width: 80%; 
+    margin: 0 auto; 
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+    background: #1e90ff
+}
+
+.logo {
+    float: left;
+}
+
+.nav {
+    float: right;
+}
+
+nav ul {
+    margin: 0; 
+    padding: 0; 
+    list-style: none; 
+}
+
+nav li {
+    
+}
