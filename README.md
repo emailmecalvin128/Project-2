@@ -1,2 +1,2 @@
 # Project-2
-Project 2 Solo 
+Project 2 TI83
