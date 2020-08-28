@@ -1,39 +1,167 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- Bootstrap CSS -->
-    <link href="https://fonts.googleapis.com/css?family=cafe retro">
-    <link href="style.css" rel="stylesheet" type="text/css">
+<head>
 
-  </head>
-    <div class="container">
+  <link href="https://fonts.googleapis.com/css?family=cafe retro">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <title>NavBar</title>
 
-        <img src= "assets/logo.png"  alt="logo" class="logo">
+  </header>
+  <div class="container">
 
-        <nav> 
-            <ul>
-                <li><a href= "#">Home</a></li>
-                <li><a href= "#">Our Games</a></li>
-                <li><a href= "#">High Scores</a></li>
-                <li><a href= "#">Blog</a></li>
-                <li><a href= "#">Contact</a></li>
-            </ul>
-        </nav>
+    <img src="assets/logo.png" alt="logo" class="logo">
 
-        <div class="banner">
-          <img class="banner-image" src="assets/banner1.png"
-          
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Our Games</a></li>
+        <li><a href="#">Game played</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  </header>
+
+  <div class="banner">
+    <img class="banner-image" src="assets/banner1.png" </div>
+
+    <head>
+      <title></title>
+
+      <style type="text/css">
+        body {
+
+          font-family: 'cafe-retro', sans-serif;
+          background-color: black;
+          color: white;
+          padding: 50px 0;
+        }
+
+        h2 {
+          color: #ffffff;
+          text-transform: uppercase;
+          text-align: center;
+          letter-spacing: 2px;
+        }
+
+        p {
+          font-size: 16px;
+          line-height: 24px;
+        }
+
+        .container {
+          max-width: 1170px;
+          width: 100%;
+          margin: 0 auto;
+        }
+
+        .column {
+          margin: 0 15px 25px;
+          box-shadow: 0 1px 3px rgba (0, 0, 0 0.12),
+            0 1px 2px rgba(0, 0, 0, 0.24);
+          /* background: #ffffff; */
+          border-radius: 10px;
+
+          flex-basis: 33%;
+        }
+
+        .card {
+          /* padding: 15px 25px;  */
+          background: none;
+
+        }
+
+        img {
+          max-width: 100%;
+        }
+      </style>
+    </head>
+
+<body>
+  <title> 4 column layout </title>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm column">
+        <div class="card">
+          <h2>Limited Indoor Service Now Avaliable</h2>
+          <p>
+            Learn how we're keeping our games safe during the pandemic.
+            Outdoor sidewalk seating area is Open!
+            12pm to 10pm Daily
+            Indoor Unlimited Gaming
+          </p>
+        </div>
+      </div>
+
+      <div class="col-sm column">
+        <!--flex content container-->
+        <div class="card">
+          <h2>Classic Webcade Games!</h2>
+          <ul>
+            <li>See our current list of your favoirte webcade games</li>
+            <li>PONG</li>
+            <li>SNAKE</li>
+            <li>TETRIS</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-sm column">
+        <!--flex content container-->
+        <div class="card">
+          <h2>We miss you!</h2>
+          <ul>
+            <li>We can't wait to host your parties</li>
+            <li>again. While we are dealing with</li>
+            <li>these times, we are still available to</li>
+            <li>to help plan your next event to the best of our abilities</li>
+            <li>Call our number to start a reservation today</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="col-sm column">
+        <div class="card">
+          <h2>Show off your Webcade Swag!</h2>
+
+          <p>Help support Webcade while looking good doing it. Come to our webcade to
+            see what new shirts we have here.,</p>
+
+          <img src="assets/coins.png">
+        </div>
+      </div>
     </div>
-  <body>
+    <hr>
 
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-  </body>
-</html>
+    <!-- Jumbotron -->
+<div class="card card-image" style="background-image: url(assets/neon.jpg);">
+  <div class="text-white text-center rgba-stylish-strong py-5 px-4">
+    <div class="py-5">
+
+      <!-- Content -->
+      <h5 class="h5 orange-text"><i class="fas fa-camera-retro"></i> Controls</h5>
+      <h2 class="card-title h2 my-4 py-2">PONG/SNAKE/TETRIS</h2>
+      <p class="mb-4 pb-2 px-md-5 mx-md-5">  
+        <li>PONG: PLAYER 1: UP(W), DOWN(S), PLAYER 2: UP(&uarr;), DOWN (&darr;)</li>
+        <li>SNAKE:PLAYER 1: UP(&uarr;), DOWN (&darr;), LEFT(&larr;), RIGHT(&rarr;)</li>
+        <li>TETRIS:PLAYER 1: CHANGE (&uarr;), LEFT(&larr;), RIGHT(&rarr;), SPEED DOWN (&darr;)</li></p>
+
+      <a class="btn peach-gradient"><i class="fas fa-clone left"></i></a>
+
+    </div>
+  </div>
+</div>
+<!-- Jumbotron -->
+      </div>
+    </div>
+    <hr>
+  </div>
+
+  <div class="hero">
+    <h1>Some text here</h1>
+
