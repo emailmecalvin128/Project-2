@@ -99,6 +99,16 @@ hr {
 
 .column {
     background:none;
+    
+}
+
+.img {
+    width: 175px;
+    height: 175px; 
+    
+}
+.img-col {
+    text-align:center;
 }
 
 
