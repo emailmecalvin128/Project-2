@@ -4,23 +4,20 @@ var snake = document.querySelector("#snake");
 var tetris = document.querySelector("#tetris");
 
 pong.addEventListener("click", function () {
-    $.ajax({.then
-        url: "/api/games",
-        method: "GET",
-        data: { name: "pong" }
-    })
-})
+  $.ajax({
+    url: "/api/games/pong",
+    method: "GET",
+  });
+});
 snake.addEventListener("click", function () {
-    $.ajax({.then
-        url: "/api/games",
-        method: "GET",
-        data: { name: "snake" }
-    })
-})
+  $.ajax({
+    url: "/api/games/snake",
+    method: "GET",
+  });
+});
 tetris.addEventListener("click", function () {
-    $.ajax({.then
-        url: "/api/games",
-        method: "GET",
-        data: { name: "tetris" }
-    })
-})
+  $.ajax({
+    url: "/api/games/tetris",
+    method: "GET",
+  });
+});
