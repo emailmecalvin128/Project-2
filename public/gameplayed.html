@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+  <link href="https://fonts.googleapis.com/css?family=cafe retro">
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <script src="gameplayd.js"></script>
+  <title>NavBar</title>
+
+  </header>
+  <div class="container">
+
+    <img src="assets/logo.png" alt="logo" class="logo">
+
+    <nav>
+      <ul>
+        <<li><a href="/">Home</a></li>
+          <li><a href="/ourgames">Our Games</a></li>
+          <li><a href="/gameplayed">Game played</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+  </header>
+
+  <div class="banner">
+    <img class="banner-image" src="assets/banner1.png" </div>
+
+    <head>
+      <!--Do you save as html or php? Hypertext Preprocessor (or 2 different pages)-->
+      <title>Table with database</title>
+      <tr>
+        <th>Id</th>
+        <th>Username</th>
+        <th>Password</th>
+      </tr>
+  </div>
+
+  <title>Table with database</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      color: #000000;
+      font-family: monospace;
+      font-size: 25px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #990000;
+      color: white;
+    }
+
+    tr:nth-child(even) {
+      background-color: #f2f2f2
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <th>games</th>
+      <th>Username</th>
+      <th>Password</th>
+    </tr>
+    <?php
+    $conn = mysqli_connect("localhost", "root", "", "company");
+    // Check connection
+    if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+    }
+    $sql = "SELECT id, username, password FROM login";
+    $result = $conn->query($sql);
+    if ($result->num_rows > 0) {
+    // output data of each row
+    while($row = $result->fetch_assoc()) {
+    echo "<tr><td>" . $row["id"]. "</td><td>" . $row["username"] . "</td><td>"
+    . $row["password"]. "</td></tr>";
+    }
+    echo "</table>";
+    } else { echo "0 results"; }
+    $conn->close();
+    ?>
+  </table>
+</body>
+
+</html>

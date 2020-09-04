@@ -1,0 +1,25 @@
+App Requirements and how to explain during presentation: 
+
+#5. How to use Get & Post routes retrieving & adding new data. 
+In routes folder. index.js 
+
+Route Methods: 
+//Get Method routes
+app.get('/', function(req,res){
+    res.send('Get reqest to the home page')
+})
+
+Route Paths: 
+
+Route Parameters: 
+
+Route Handlebars: 
+
+#6. Use at least one new library, Package or Technology. 
+JQuery (Library API/ App programming Interface)
+
+#7. MVC paradigm: 
+App_Data, App_Start, Content, Controllers, Fonts, Models, Scripts, Views, Global.asax, Package.config, Web.config
+
+#8. (Identation (Format document), scoping: determine where variables, fucntions and objects are accessible in your code during runtime.Global vs Local.
+ , naming)
