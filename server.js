@@ -5,7 +5,7 @@
 // *** Dependencies
 // =============================================================
 var express = require("express");
-const exphbs= require ('express-handlebars');
+//const exphbs= require ('express-handlebars');
 
 // Sets up the Express App
 // =============================================================
@@ -14,6 +14,7 @@ var PORT = process.env.PORT || 8080;
 
 // Requiring our models for syncing
 var db = require("./models");
+console.log("--->", db)
 
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
@@ -33,17 +34,4 @@ db.sequelize.sync({ force: true }).then(function() {
   app.listen(8080,() => {
     console.log("App listening on PORT " + PORT);
   });
-app.engine ('hbs', exphbs ({
-  defaultlayout: 'main',
-  extname: '.hbs'
-}))
-
-app.set('view engine', 'hbs');
-
-}))
-app.get('/', (req,res) => {
-  res.render ('home');
-}
-)
-
-});
+})
