@@ -5,6 +5,7 @@
 // *** Dependencies
 // =============================================================
 var express = require("express");
+const exphbs= require ('express-handlebars');
 
 // Sets up the Express App
 // =============================================================
@@ -29,7 +30,20 @@ require("./routes/html-routes.js")(app);
 // Syncing our sequelize models and then starting our Express app
 // =============================================================
 db.sequelize.sync({ force: true }).then(function() {
-  app.listen(PORT, function() {
+  app.listen(8080,() => {
     console.log("App listening on PORT " + PORT);
   });
+app.engine ('hbs', exphbs ({
+  defaultlayout: 'main',
+  extname: '.hbs'
+}))
+
+app.set('view engine', 'hbs');
+
+}))
+app.get('/', (req,res) => {
+  res.render ('home');
+}
+)
+
 });
