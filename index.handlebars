@@ -1,1 +1,76 @@
-<h1>{{game}}</h1>
+<div class="container">
+
+    <div class="jumbotron">
+        <h1>Pick your game</h1>
+        <p>Games to be played</p>
+        <br>
+        <h2>Select a your game</h2>
+        <panel>
+            <form class="create-form">
+                <div class="form-group">
+                    <label for="newgame">Game to be played</label>
+                    {{!-- <input type="text" id="newgame" name="game"> --}}
+                    <select data-placeholder="" id="newgame" name="game">
+                        <option value="Nothing Selected" selected>Select a Game</option>
+                        <option value="Pong">Pong</option>
+                        <option value="Snake">Snake</option>
+                        <option value="Tetris">Tetris</option>
+        
+                    </select>
+
+                    <button type="submit" class="btn btn-success" id="addgame">
+                        <span class="fa fa-thumbs-up"></span>
+                    </button>
+                </div>
+            </form>
+        </panel>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="leftside"><strong>Select your game</strong>
+                    <p>Send order to webcade when ready for play</p>
+                </div>
+                <div class="panel-body">
+
+                    <ul>
+                        {{#each games}}
+                        {{#unless gameplayed}}
+
+                        <span><strong> {{this.id}} - {{this.game_name}}</strong></span>
+                        <button type="button" class="playgame btn btn-warning" id="playbutton" data-id="{{this.id}}"
+                            data-newplayed="{{play}}"><span class="fa fa-usd"></span></button>
+                        <hr>
+                        {{/unless}}
+                        {{/each}}
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="panel panel-default">
+                <div class="panel-heading" id="rightside"><strong>Game is ready for play</strong>
+                    <p>Remove game from table when played</p>
+                </div>
+                <div class="panel-body">
+                    <ul>
+                        {{#each games}}
+                        {{#if gameplayed}}
+                        <span><strong> {{this.id}} - {{this.game_name}}</strong></span>
+                        <button type="button" class="trashgame btn btn-danger" id="trashbutton" data-id="{{this.id}}"
+                            data-newgameplayed="{{devour}}"><span class="fa fa-trash"></span></button>
+                        <hr>
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+
+
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+    
+</div>

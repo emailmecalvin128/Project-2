@@ -34,3 +34,33 @@ db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
 module.exports = db;
+
+}
+var orm = require("../config/orm.js");
+var game = {
+  selectAll: function(cb) {
+    orm.selectAll("games", function(res) {
+      cb(res);
+    });
+  },
+
+  insertOne: function(cols, vals, cb) {
+    orm.insertOne("games", cols, vals, function(res) {
+      cb(res);
+    });
+  },
+
+  updateOne: function(objColVals, condition, cb) {
+    orm.updateOne("games", objColVals, condition, function(res) {
+      cb(res);
+    });
+  },
+
+  deleteOne: function(condition, cb) {
+    orm.deleteOne("games", condition, function(res) {
+      cb(res);
+    });
+  }
+};
+
+module.exports = game;
